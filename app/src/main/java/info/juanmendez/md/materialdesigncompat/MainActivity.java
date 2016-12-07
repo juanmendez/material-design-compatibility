@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
      @Click(R.id.btn_snackbar)
      void onBtnSnackbarClick(View view){
+
+         //view is used to track the activity's layout or track the root layout
+         //based on the activity's layout snackbar appears just at the top level with gravity
+         //at the bottom. We use now CoordinatorLayout in order to attach this child of that view
+         //and nest right below!
          Snackbar.make( view, "Hello from SnackBar maker!", Snackbar.LENGTH_LONG ).show();
      }
 }
