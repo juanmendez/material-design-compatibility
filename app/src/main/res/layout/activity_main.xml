@@ -14,6 +14,20 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@color/textColorPrimary"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_snackbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My SnackBar"/>
+    </LinearLayout>
+
 
      <android.support.design.widget.FloatingActionButton
          android:layout_width="wrap_content"
