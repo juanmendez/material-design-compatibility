@@ -1,48 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+DrawerLayout only requires a layout which keeps the content and a fragment used as the drawer.
+Those are the only requirements, there is no other code needed for that to work.
+-->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="info.juanmendez.md.materialdesigncompat.MainActivity_">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@color/textColorPrimary"/>
-
+    <!--keep the content here!-->
     <LinearLayout
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-        android:id="@+id/btn_snackbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My SnackBar"/>
-
-        <Button
-            android:id="@+id/btn_snackbar_callback"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SnackBar then callback!"/>
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-        <Button
-            android:id="@+id/btn_snackbar_color"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SnackBar customized!"/>
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_snackbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My SnackBar"/>
+
+            <Button
+                android:id="@+id/btn_snackbar_callback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SnackBar then callback!"/>
+        </LinearLayout>
     </LinearLayout>
 
+    <!-- In this demo, https://goo.gl/AWBNw6 is used instead of NavigationView.
+    So NavigationView is replacing a simple fragment.-->
 
-     <android.support.design.widget.FloatingActionButton
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content" android:id="@+id/fab" android:src="@drawable/ic_done"
-         android:layout_gravity="bottom|right" android:layout_margin="16dp"/>
-</android.support.design.widget.CoordinatorLayout>
+    <!-- Navigation View -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="#8C000000"
+        app:itemTextColor="#E6000000"
+        app:menu="@menu/menu_items_only"/>
+
+
+</android.support.v4.widget.DrawerLayout>
