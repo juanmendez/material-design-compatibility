@@ -31,12 +31,24 @@ public class MainActivity extends AppCompatActivity {
      }
 
      @Click(R.id.btn_snackbar)
-     void onBtnSnackbarClick(View view){
+     void onBtnSnackbar(View v){
 
          //view is used to track the activity's layout or track the root layout
          //based on the activity's layout snackbar appears just at the top level with gravity
          //at the bottom. We use now CoordinatorLayout in order to attach this child of that view
          //and nest right below!
-         Snackbar.make( view, "Hello from SnackBar maker!", Snackbar.LENGTH_LONG ).show();
+         Snackbar.make( v, "Hello from SnackBar maker!", Snackbar.LENGTH_LONG ).show();
+     }
+
+     @Click(R.id.btn_snackbar_callback)
+     void onBtnSnackbarCallback(View v ){
+
+         Snackbar snackbarWithOption = Snackbar.make( v, "Hello from SnackBar maker!", Snackbar.LENGTH_LONG );
+         snackbarWithOption.show(); //this can appear here or right below.
+
+         //this automatically adds RETRY option, and handles click action.
+         snackbarWithOption.setAction("RETRY", view -> {
+            Snackbar.make( view, "File loaded!", Snackbar.LENGTH_LONG).show();
+         });
      }
 }

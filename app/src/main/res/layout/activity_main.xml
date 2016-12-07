@@ -22,10 +22,16 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_snackbar"
+        android:id="@+id/btn_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My SnackBar"/>
+
+        <Button
+            android:id="@+id/btn_snackbar_callback"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="My SnackBar"/>
+            android:text="SnackBar then callback!"/>
     </LinearLayout>
 
 
