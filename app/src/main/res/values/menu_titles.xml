@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="header_web_front_ent">Web Front End</string>
-    <string name="header_back_end">Back End</string>
-    <string name="header_mobile">Mobile</string>
-
-    <string name="drawer_open">Open</string>
-    <string name="drawer_close">Close</string>
     <string name="android">Android</string>
     <string name="ios">iOS</string>
     <string name="windows">Windows</string>

@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MaterialDesignCompat</string>
     <string name="action_settings">Settings</string>
+
+    <string name="header_web_front_ent">Web Front End</string>
+    <string name="header_back_end">Back End</string>
+    <string name="header_mobile">Mobile</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>
