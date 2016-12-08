@@ -47,7 +47,7 @@ Those are the only requirements, there is no other code needed for that to work.
         app:headerLayout="@layout/header"
         app:itemIconTint="#8C000000"
         app:itemTextColor="#E6000000"
-        app:menu="@menu/menu_grouped_items"/>
+        app:menu="@menu/menu_items_with_headers"/>
 
 
 </android.support.v4.widget.DrawerLayout>
