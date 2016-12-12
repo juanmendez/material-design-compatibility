@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Material Design Compat</string>
+    <string name="dummy_long_text">Tart lollipop soufflé jelly liquorice chocolate bar jelly candy canes pie. Ice cream soufflé gummi bears jelly fruitcake candy jelly-o. Dragée carrot cake marshmallow marshmallow cake jelly-o sweet roll jelly beans sesame snaps.</string>
+    <string name="dummy_title">Cupcake ipsum dolor sit amet halvah chocolate</string>
 </resources>
