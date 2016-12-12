@@ -5,9 +5,11 @@
 
  import org.androidannotations.annotations.AfterViews;
  import org.androidannotations.annotations.EActivity;
+ import org.androidannotations.annotations.OptionsMenu;
  import org.androidannotations.annotations.ViewById;
 
  @EActivity(R.layout.activity_main)
+ @OptionsMenu(R.menu.menu)
 public class MainActivity extends AppCompatActivity {
 
     @ViewById
